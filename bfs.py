@@ -6,7 +6,7 @@ graph = {'0': ['2', '3', '1'],
          '4': ['5', '6','3'],
          '5': ['4'],
          '6': ['4','7'],
-         '7': ['6','2']	}
+         '7': ['6','1']	}
 
 # finds shortest path between 2 nodes of a graph using BFS
 def bfs_shortest_path(graph, start, goal):
@@ -17,7 +17,7 @@ def bfs_shortest_path(graph, start, goal):
  
     # return path if start is goal
     if start == goal:
-        return "That was easy! Start = goal"
+        return [start]
  
     # keeps looping until all possible paths have been checked
     while queue:
@@ -41,9 +41,15 @@ def bfs_shortest_path(graph, start, goal):
             explored.append(node)
  
     # in case there's no path between the 2 nodes
-    return "So sorry, but a connecting path doesn't exist :("
+    return [-1]
  
-print(bfs_shortest_path(graph, '0', '6'))
-# returns ['6', '2', '0', '1', '3']
+print("Please input the starting node: ")
+#for python 3.x raw_input() is deprecated, use input() lines
+x=raw_input() 
+#x=input()
+print("Please input the destination: ")
+y=raw_input()
+#y=input()
+print(bfs_shortest_path(graph, x, y))
 
-#SOURCE https://pythoninwonderland.wordpress.com/2017/03/18/how-to-implement-breadth-first-search-in-python/
+#adapted from SOURCE https://pythoninwonderland.wordpress.com/2017/03/18/how-to-implement-breadth-first-search-in-python/
