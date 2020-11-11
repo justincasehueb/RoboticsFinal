@@ -1,0 +1,14 @@
+<package>
+  <description brief="proj1">
+
+     proj1
+
+  </description>
+  <author>Justin Huebner</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/proj1</url>
+
+</package>
+
+
